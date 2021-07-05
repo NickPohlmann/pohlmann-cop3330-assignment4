@@ -5,32 +5,42 @@
 
 package ucf.assignments;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import java.io.IOException;
 
-public class TodoList extends Application{
+import javafx.fxml.FXML;
 
-    public static void main(String[] args) {
-        launch(args);
+import javax.swing.*;
+
+public class TodoList extends App{
+
+    private String title;
+
+    public TodoList (String title) {
+        //This will set the title for the todo list
     }
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("TodoLists.fxml"));
+    @FXML
+    public void addNewItem (Action actionEvent) {
+        //This will open and new window and prompt for a description and title and create the new item
+    }
 
-            Scene scene = new Scene(root);
+    @FXML
+    public void removeItem (Action actionEvent) {
+        //This button will allow the user to delete an item
+    }
 
-            primaryStage.setScene(scene);
-            primaryStage.setTitle("Calculator");
-            primaryStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    @FXML
+    public void displayAllItems (Action actionEvent) {
+        //This will show all the items within a todoList
+    }
+
+    @FXML
+    public void displayCompletedItems (Action actionEvent) {
+        //This will show all the completed items by using the isCompleted Boolean to
+    }
+
+    @FXML
+    public void displayIncompleteItems (Action actionEvent) {
+        //This will show all the incomplete items by displaying all isCompleted == false
     }
 }
 

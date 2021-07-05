@@ -5,7 +5,6 @@ class App {
     +main()
     +start()
 }
-
 class TodoList {
     'must hold 100 individual items
     -title: String
